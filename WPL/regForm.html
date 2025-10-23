@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+    <body bgcolor="#FBF3D5">
+        <h1 style="color: rgb(152, 77, 223);"><marquee behavior=alternate direction=right onmouseover="this.stop()" onmouseout="this.start()">WELCOME TO FRESHERS WORLD!!</marquee></h1>
+       <center><form><table border="1" WIDTH="900px" height="600px">
+            <tr>
+                <th colspan="2">Registration Form</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><select name="age">
+                    <option>SELECT</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                </td>
+            </tr><tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Re-enter Password</td>
+                <td><input type="password" name="repassword"></td>
+            </tr><tr>
+                <td>Select your security Question</td>
+                <td><input type="radio" name="q" value="pet">what is your pet name?<br>
+                <input type="radio" name="q" value="friend">Who is your best friend?<br>
+                <input type="radio" name="q" value="color">Which is your favorite colour?<br>
+                <input type="radio" name="q" value="teacher">Who is your favorite teacher?</td>
+            </tr>
+            <tr>
+                <td>Answer of security question</td>
+                <td><input type="text" name="answer"></td>
+            </tr>
+            <tr>
+                <td>Email id</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Languages Known</td>
+                <td><input type="checkbox" name="lang" value="malayalam">Malayalam
+                <input type="checkbox" name="lang" value="hindi">Hindi
+                <input type="checkbox" name="lang" value="english">English
+        </td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><table border="1">
+                    <tr><th>home</th>
+                    <th>office</th></tr>
+                    <tr>
+                        <td><input type="text" name="home"></td>
+                        <td><input type="text" name="office"></td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+                <td>Upload CV</td>
+                <td><input type="file" name="cv"></td>
+            </tr>
+             <tr>
+                <td><input type="reset" value="Reset" ></td>
+                <td><input type="submit" value="Submit" ></td>
+                
+            </tr>
+
+            
+
+        </table></form></center> 
+
+    </body>
+</html>

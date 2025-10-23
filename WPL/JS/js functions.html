@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String & Math Functions</title>
+</head>
+<body bgcolor="lightyellow">
+  <center>
+    <h1 style="color:rgb(125, 41, 41)">String Functions</h1>
+    <input type="text" id="inputstring" placeholder="Enter a string..." />
+    <br><br>
+    <button onclick="Stringfun()">String functions</button>
+    <button onclick="strconcat()">Concatenation</button>
+    <button onclick="charAtFunc()">charAt</button>
+    <button onclick="replaceStr()">Replace</button>
+    <button onclick="trimStr()">Trim</button>
+    <button onclick="sliceStr()">Slice</button>
+    <button onclick="splitStr()">Split</button>
+    <button onclick="substringStr()">Substring</button>
+    <p id="stringResult"></p>
+
+    <h1 style="color:rgb(128, 34, 34)">Math Functions</h1>
+    <input type="text" id="inputint" placeholder="Enter a number..." />
+    <br><br>
+    <button onclick="Mathfun()">Math functions</button>
+    <p id="mathResult"></p>
+  </center>
+
+  <script>
+    function Stringfun() {
+      let str = document.getElementById("inputstring").value;
+      let length = str.length;
+      let upper = str.toUpperCase();
+      let lower = str.toLowerCase();
+      let reverse = str.split("").reverse().join("");
+
+      document.getElementById("stringResult").innerText =
+        "Length of string is = " +
+        length +
+        "\nUppercase: " +
+        upper +
+        "\nLowercase: " +
+        lower +
+        "\nReversed String: " +
+        reverse;
+    }
+
+    function strconcat() {
+      let str1 = document.getElementById("inputstring").value;
+      let str2 = prompt("Enter another string to concatenate:");
+      let result = str1.concat(str2);
+      document.getElementById("stringResult").innerText =
+        "Concatenated String: " + result;
+    }
+
+    function charAtFunc() {
+      let str = document.getElementById("inputstring").value;
+      let index = parseInt(prompt("Enter the index to find character at:"));
+      if (index >= 0 && index < str.length) {
+        let char = str.charAt(index);
+        document.getElementById("stringResult").innerText =
+          "Character at index " + index + " is: " + char;
+      } else {
+        document.getElementById("stringResult").innerText =
+          "Index out of bounds.";
+      }
+    }
+
+    function replaceStr() {
+      let str = document.getElementById("inputstring").value;
+      let toReplace = prompt("Enter the substring to replace:");
+      let replaceWith = prompt("Enter the new substring:");
+      let newStr = str.replace(toReplace, replaceWith);
+      document.getElementById("stringResult").innerText =
+        "Modified String: " + newStr;
+    }
+
+    function trimStr() {
+      let str = document.getElementById("inputstring").value;
+      let trimmed = str.trim();
+      document.getElementById("stringResult").innerText =
+        "Original String: '" + str + "'\n" +
+        "Trimmed String: '" + trimmed + "'";
+    }
+
+    function sliceStr() {
+      let str = document.getElementById("inputstring").value;
+      let start = parseInt(prompt("Enter start index:"));
+      let end = parseInt(prompt("Enter end index:"));
+      let sliced = str.slice(start, end);
+      document.getElementById("stringResult").innerText =
+        "Sliced String (from " + start + " to " + end + "): " + sliced;
+    }
+
+    function splitStr() {
+      let str = document.getElementById("inputstring").value;
+      let delimiter = prompt("Enter delimiter to split (e.g. space, comma):");
+      let parts = str.split(delimiter);
+      document.getElementById("stringResult").innerText =
+        "Split parts: " + parts.join(" | ");
+    }
+
+    function substringStr() {
+      let str = document.getElementById("inputstring").value;
+      let start = parseInt(prompt("Enter start index:"));
+      let end = parseInt(prompt("Enter end index:"));
+      let subStr = str.substring(start, end);
+      document.getElementById("stringResult").innerText =
+        "Substring (from " + start + " to " + end + "): " + subStr;
+    }
+
+    function Mathfun() {
+      let num = parseFloat(document.getElementById("inputint").value);
+      let square = Math.pow(num, 2);
+      let squareRoot = Math.sqrt(num);
+      let randomNum = Math.random();
+      let floor = Math.floor(num);
+      let ceil = Math.ceil(num);
+      let round = Math.round(num);
+      let sin = Math.sin(num);
+      let cos = Math.cos(num);
+      let tan = Math.tan(num);
+      let absolute = Math.abs(num);
+
+      document.getElementById("mathResult").innerText =
+        "Square of number is = " +
+        square +
+        "\nSquare root: " +
+        squareRoot +
+        "\nRandom number: " +
+        randomNum +
+        "\nFloor: " +
+        floor +
+        "\nCeil: " +
+        ceil +
+        "\nRound: " +
+        round +
+        "\nSin: " +
+        sin +
+        "\nCos: " +
+        cos;
+      "\nTan: " + tan
+      "\nAbsolute: " + absolute;
+    }
+  </script>
+</body>
+</html>

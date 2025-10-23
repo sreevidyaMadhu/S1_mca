@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS </title>
+
+
+    <style>
+        .internal-css-example {
+            background-color: #ffeaa7;
+            padding: 15px;
+            border-radius: 10px;
+            color: #2d3436;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        #heading {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin-top: 20px;
+        }
+    </style>
+
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1 id="heading">Introduction to CSS</h1>
+    <img src="C:\Users\cacet\OneDrive\Desktop\mca1\WPL\css.png" alt="CSS Diagram" />
+
+    <h2>What is CSS?</h2>
+    <p>
+        Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of HTML documents.
+        CSS controls the <span class="highlight">layout, colors, fonts, and responsiveness</span> of web pages.
+    </p>
+
+   
+    <p style="color: darkgreen; font-weight: bold; background-color: #d4efdf; padding: 10px; border-radius: 8px;">
+        This paragraph is styled with <strong>inline CSS</strong> directly on the element!
+    </p>
+
+    <div class="internal-css-example">
+        This block is styled using <strong>internal CSS</strong> inside the &lt;style&gt; tag in the document head.
+    </div>
+
+    <h2>CSS Styling Methods</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Inline CSS</td>
+                <td>Applied directly inside an HTML element using the <code>style</code> attribute.</td>
+                <td><code>&lt;p style="color: red;"&gt;Text&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Internal CSS</td>
+                <td>Placed within a <code>&lt;style&gt;</code> tag in the HTML head.</td>
+                <td><code>&lt;style&gt;p { color: blue; }&lt;/style&gt;</code></td>
+            </tr>
+            <tr>
+                <td>External CSS</td>
+                <td>Written in a separate CSS file and linked using the <code>&lt;link&gt;</code> tag.</td>
+                <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>CSS Box Model</h2>
+    <p>
+        Every HTML element is a rectangular box. The box model consists of:
+        <ul>
+            <li><strong>Content:</strong> The actual content like text or images.</li>
+            <li><strong>Padding:</strong> Space around the content.</li>
+            <li><strong>Border:</strong> A border surrounding the padding (optional).</li>
+            <li><strong>Margin:</strong> Space outside the border, separating elements.</li>
+        </ul>
+    </p>
+
+    <img src="C:\Users\cacet\OneDrive\Desktop\mca1\WPL\boxmodel.png" alt="CSS Box Model Diagram" />
+    <h2>CSS Selectors</h2>
+    <p>
+        Selectors define which HTML elements are styled by CSS. Some common selectors are:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Selector</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Type Selector</td>
+                <td>Targets all elements of a specific type.</td>
+                <td><code>p { color: blue; }</code></td>
+            </tr>
+            <tr>
+                <td>Class Selector</td>
+                <td>Targets elements with a specific class attribute.</td>
+                <td><code>.highlight { font-weight: bold; }</code></td>
+            </tr>
+            <tr>
+                <td>ID Selector</td>
+                <td>Targets a unique element with an id.</td>
+                <td><code>#header { background-color: yellow; }</code></td>
+            </tr>
+            <tr>
+                <td>Attribute Selector</td>
+                <td>Targets elements with a specific attribute.</td>
+                <td><code>a[target="_blank"] { color: red; }</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    <h2>Responsive Design</h2>
+    <p>
+        CSS enables websites to be <span class="highlight">responsive</span>, adapting their layout to different screen sizes like desktops, tablets, and phones.
+    </p>
+    <img src="C:\Users\cacet\OneDrive\Desktop\mca1\WPL\responsiveimg.png" alt="Responsive Design Diagram" />
+
+    <h2>Learn More About CSS</h2>
+    <p>
+        Visit <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN CSS Documentation</a> for more info.
+    </p>
+    <p><a href="#top">back to top</a></p>
+
+    <button class="button" onclick="alert('Thanks for exploring CSS!')">Click Me!</button>
+
+</body>
+</html>
+

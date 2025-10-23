@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <button id="button">click</button>
+        <script>
+            document.getElementById("button").addEventListener("click",fun);
+            function fun()
+            {
+                var rcol="#";
+                for(var i=0;i<6;i++)
+            {
+                rcol+=Math.floor(Math.random()*10);
+            }
+            document.body.style.background=rcol;
+            }
+        </script>
+    </body>
+</html>

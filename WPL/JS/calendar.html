@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Year Calendar</title>
+</head>
+<body>
+  <h2>Year Calendar</h2>
+  <label>Year: <input type="number" id="year" placeholder="enter a year"></label>
+  <button onclick="showYearCalendar()">Show</button>
+
+  <div id="calendar"></div>
+
+  <script>
+    function showYearCalendar() {
+      var year = parseInt(document.getElementById("year").value);
+      if (isNaN(year)) {
+        alert("Please enter a valid year");
+        return;
+      }
+
+      const months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+      ];
+
+      let calendarHTML = "";
+
+      for (let month = 0; month < 12; month++) {
+        calendarHTML += "<h3>" + months[month] + " " + year + "</h3>";
+        calendarHTML += "<table border='1'>" +
+                        "<tr><th>Sun</th><th>Mon</th><th>Tue</th>" +
+                        "<th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+
+        let d = new Date(year, month, 1);
+        let startDay = d.getDay();
+
+        
+        for (let i = 0; i < startDay; i++) {
+          calendarHTML += "<td></td>";
+        }
+
+        
+        while (d.getMonth() === month) {
+          let dayNum = d.getDate();
+          calendarHTML += "<td>" + dayNum + "</td>";
+
+          if (d.getDay() === 6) {
+            calendarHTML += "</tr><tr>";
+          }
+          d.setDate(dayNum + 1);
+        }
+
+        
+        let lastDay = new Date(year, month + 1, 0).getDay();
+        if (lastDay !== 6) {
+          for (let j = lastDay + 1; j <= 6; j++) {
+            calendarHTML += "<td></td>";
+          }
+          calendarHTML += "</tr>";
+        } else {
+          calendarHTML = calendarHTML.replace(/<tr>$/, "");
+        }
+
+        calendarHTML += "</table><br>";
+      }
+
+      document.getElementById("calendar").innerHTML = calendarHTML;
+    }
+  </script>
+</body>
+</html>
+

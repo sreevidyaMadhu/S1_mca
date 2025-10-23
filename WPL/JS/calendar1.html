@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Year Calendar</title>
+</head>
+<body>  
+    <p id="abc"></p>
+    <script>
+        var d="<table border='1'><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+        var t="</tr></table>";
+        var c=new Date(2021,0);
+        var day=c.getDay();
+        for(var i=0;i<day;i++)
+        {
+            d=d+"<td></td>";
+        }
+        while(c.getMonth()==0)
+        {
+            var date=c.getDate();
+            d=d+"<td>"+date+"</td>";
+            if(c.getDay()==6)
+            {
+                d=d+"</tr><tr>";
+            }
+            c.setDate(date+1);
+        }
+        d+=t;
+    </script></html></body></html>

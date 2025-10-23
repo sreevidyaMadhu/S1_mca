@@ -1,0 +1,120 @@
+
+body {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a1a2e;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+
+h1 {
+    color: #0f3460;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(15, 52, 96, 0.7);
+    margin-bottom: 30px;
+}
+
+
+h2 {
+    color: #16213e;
+    font-size: 2rem;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+    margin-top: 40px;
+}
+
+h2:hover {
+    color: #e94560;
+    cursor: pointer;
+}
+
+
+p {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    margin: 15px 0;
+    color: #0f3460;
+}
+
+
+.highlight {
+    background: linear-gradient(90deg, #e94560, #f9d423);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    background: rgba(255,255,255,0.9);
+    color: #16213e;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #e94560;
+    color: white;
+    font-weight: 700;
+}
+
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 20px auto;
+}
+
+
+a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #16213e;
+    text-decoration: underline;
+}
+
+
+.button {
+    display: inline-block;
+    background-color: #e94560;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(233, 69, 96, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px 0;
+}
+
+.button:hover {
+    background-color: #f9d423;
+    color: #16213e;
+    box-shadow: 0 8px 20px rgba(249, 212, 35, 0.6);
+}

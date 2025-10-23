@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            *{
+                text-align:center;
+            }
+            img{
+                width:300px;
+                height:300px;
+                border-radius:50%;
+            }
+        </style>
+        
+    </head>
+        
+    <body>
+        <img id="img" src="css.png" alt="random image" onmouseover="hoverIn()" onmouseout="hoverOut()">
+        <p id ="text">random img</p>
+        <script>
+            const image=document.getElementById("img");
+            const text=document.getElementById("text");
+            function hoverIn()
+            {
+
+                image.src="bg.jpg";
+                text.innerHTML="img"+random+".jpg";
+            }
+
+            function hoverOut()
+            {
+                image.src="css.png";
+                text.innerHTML="random img";
+            }
+        </script>
+    </body>
+</html>
