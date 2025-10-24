@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form name="myform" onsubmit="validation()">
+            <input type="text" name="abc">
+            <input type="submit" value="Submit">
+            <p style="color: red;" id="a">  </p>
+            <script>
+                function validation() {
+                    var x = document.forms["myform"]["abc"].value;
+                    if (x == "") {
+                        event.preventDefault();
+                        document.getElementById("a").innerHTML="This field cannot be left blank";
+                    }
+                    if(isNaN(x)){
+                        event.preventDefault();
+                        document.getElementById("a").innerHTML="This field accepts only numbers";
+                    }
+                }
+            </script>
+    </body>
+</html>

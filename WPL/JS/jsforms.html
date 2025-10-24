@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+    <style>
+        .required{color: red;}
+        .error{color: red;}
+    </style>
+    <body bgcolor="#FBF3D5">
+        <h1 style="color: rgb(152, 77, 223);"><marquee behavior=alternate direction=right onmouseover="this.stop()" onmouseout="this.start()">WELCOME TO FRESHERS WORLD!!</marquee></h1>
+       <center><form name="regform" onsubmit="validation()"><table border="1" WIDTH="900px" height="600px">
+            <tr>
+                <th colspan="2">Registration Form</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><p id="nameerror" class="error"><b class="required">*</b></p><input type="text" name="name"></td>
+            
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><p id="ageerror" class="error"><b class="required">*</b></p><input type="text" name="age"></td>
+            </tr><tr>
+                <td>Password</td>
+                <td><p id="passworderror" class="error"><b class="required">*</b></p><input type="password" name="password"></td>
+                
+            </tr>
+            <tr>
+                <td>Re-enter Password</td>
+                <td><p id="repassworderror"><input type="password" name="repassword"></td>
+            </tr><tr>
+                <td>Select your security Question</td>
+                <td><input type="radio" name="q" value="pet">what is your pet name?<br>
+                <input type="radio" name="q" value="friend">Who is your best friend?<br>
+                <input type="radio" name="q" value="color">Which is your favorite colour?<br>
+                <input type="radio" name="q" value="teacher">Who is your favorite teacher?</td>
+            </tr>
+            <tr>
+                <td>Answer of security question</td>
+                <td><input type="text" name="answer"></td>
+            </tr>
+            <tr>
+                <td>Email id</td>
+                <td><p id="emailerror" class="error"><b class="required">*</b></p>
+                <input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Languages Known</td>
+                <td><input type="checkbox" name="lang" value="malayalam">Malayalam
+                <input type="checkbox" name="lang" value="hindi">Hindi
+                <input type="checkbox" name="lang" value="english">English
+        </td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><table border="1">
+                    <tr><th>home</th>
+                    <th>office</th></tr>
+                    <tr>
+                        <td><input type="text" name="home"></td>
+                        <td><input type="text" name="office"></td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+                <td>Upload CV</td>
+                <td><input type="file" name="cv"></td>
+            </tr>
+             <tr>
+                <td><input type="reset" value="Reset" ></td>
+                <td><input type="submit" value="Submit" ></td>
+                
+            </tr>
+
+            
+
+        </table>
+        <p style="color: red;" id="a"></p>
+        <script>
+            function validation(){
+                let name=document.forms["regform"]["name"].value;
+                let age=document.forms["regform"]["age"].value;
+                let password=document.forms["regform"]["password"].value;
+                let email=document.forms["regform"]["email"].value;
+                if(name==""){
+                    event.preventDefault();
+                    document.getElementById("nameerror").innerHTML="Name must be filled out";
+                }
+                if(isNaN(age) || age==""){
+                    event.preventDefault();
+                    document.getElementById("ageerror").innerHTML="Please enter a valid age";
+                }
+                if(password.length<6){
+                    event.preventDefault();
+                    document.getElementById("passworderror").innerHTML="Password must be at least 6 characters long";
+                }
+                if(email.match(/@/)==null){
+                    event.preventDefault(); 
+                    document.getElementById("emailerror").innerHTML="Email must contain @ symbol";
+                }
+                else{
+                    document.getElementById("a").innerHTML="Form submitted successfully!";
+                    event.preventDefault();
+                }
+            }
+        </script>
+    </form></center>
+
+    </body>
+</html>
