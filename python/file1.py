@@ -7,4 +7,8 @@ for line in file1:
         file2.write(line)
         
 print("lines successfully copied")
+
+file1=open()
+
+
         
